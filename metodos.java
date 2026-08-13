@@ -20,6 +20,33 @@ public class metodos {
         }
     }
 
+    //Imprime la diagonal superior de la matriz de enteros, el resto de los elementos se imprimen como 0.
+    public void MostrarMatrizEnteraDiagonal(int[][] m) {
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m.length; j++) {
+                if (i == j) {
+                    System.out.print(" - " + m[i][j]);
+                } else {
+                    System.out.print(" - 0");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public void MostrarMatrizEnteraDiagonalInf(int[][] m) {
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m.length; j++) {
+                if(i + j == m.length - 1) {
+                    System.out.print(" - " + m[i][j]);
+                } else {
+                    System.out.print(" - 0");
+                }
+            }
+            System.out.println();
+        }
+    }
+
     //Llena una matriz de objetos ObjMatriz con valores aleatorios entre 1 y 50.
     public ObjMatriz[][] LlenarMatrizObjetual(ObjMatriz[][] m) {
         for (int i = 0; i < m.length; i++) {
@@ -41,4 +68,33 @@ public class metodos {
             System.out.println();
         }
     }
+
+    //Imprime la diagonal superior de la matriz de objetos, el resto de los elementos se imprimen como 0.
+    public void MostrarMatrizObjetualDiagonal(ObjMatriz[][] m) {
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m.length; j++) {
+                if (i == j) {
+                    System.out.print(" - " + m[i][j].getDato());
+                } else {
+                    System.out.print(" - 0");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public void MostrarMatrizObjetualDiagonalInf(ObjMatriz[][] m) {
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m.length; j++) {
+                if (i + j == m.length - 1) {
+                    System.out.print(" - " + m[i][j].getDato());
+                } else {
+                    System.out.print(" - 0");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    
 }
